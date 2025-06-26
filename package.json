@@ -1,7 +1,21 @@
 {
-  "name": "plate-playground-template",
-  "version": "0.1.0",
+  "name": "notion-clone",
+  "version": "1.0.0",
+  "description": "A modern, open-source Notion-like editor built with Plate.js and Next.js 15",
   "private": true,
+  "author": {
+    "name": "Your Name",
+    "email": "your.email@example.com"
+  },
+  "keywords": [
+    "notion",
+    "editor",
+    "rich-text",
+    "plate",
+    "nextjs",
+    "ai",
+    "collaboration"
+  ],
   "scripts": {
     "build": "next build",
     "depset": "pnpm dlx depset@latest @udecode --yes",
@@ -10,7 +24,10 @@
     "lint:fix": "next lint --fix && prettier --write . --log-level warn",
     "preview": "next build && next start",
     "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "setup": "cp .env.example .env.local && echo 'Environment file created! Please update .env.local with your API keys.'",
+    "clean": "rm -rf .next dist",
+    "fresh": "rm -rf node_modules pnpm-lock.yaml && pnpm install"
   },
   "dependencies": {
     "@ai-sdk/openai": "^1.3.22",
